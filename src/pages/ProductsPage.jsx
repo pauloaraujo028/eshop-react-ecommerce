@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import CommonSection from "../components/UI/CommonSection";
 import Helmet from "../components/Helmet/Helmet";
 import { Container, Row, Col } from "reactstrap";
 
-import "../styles/shop.css";
+import "../styles/productsPage.css";
 
 import products from "../assets/data/products";
 import ProductsList from "../components/UI/ProductsList";
 
-const Shop = () => {
+const ProductsPage = () => {
   const [productsData, setProductsData] = useState(products)
 
   const handleFilter = (e) => {
@@ -54,16 +54,20 @@ const Shop = () => {
     setProductsData(searchedProducts)
   }
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
-    <Helmet title="Shop">
-      <CommonSection title="Products" />
+    <Helmet title="Produtos">
+      <CommonSection title="Produtos" />
       <section>
         <Container>
           <Row>
             <Col lg="3" md="6">
               <div className="filter_widget">
                 <select onChange={handleFilter}>
-                  <option>Filter By Category</option>
+                  <option>Filtrar por Categoria</option>
                   <option value="sofa">Sofa</option>
                   <option value="mobile">Mobile</option>
                   <option value="chair">Chair</option>
@@ -75,15 +79,15 @@ const Shop = () => {
             <Col lg="3" md="6" className="text-end">
               <div className="filter_widget">
                 <select>
-                  <option>Sort By</option>
-                  <option value="ascending">Ascending</option>
-                  <option value="descending">Descending</option>
+                  <option>Ordenar por</option>
+                  <option value="ascending">Crescente</option>
+                  <option value="descending">Decrescente</option>
                 </select>
               </div>
             </Col>
             <Col lg="6" md="12">
               <div className="search_box">
-                <input type="text" placeholder="Search....." onChange={handleSearch} />
+                <input type="text" placeholder="Buscar....." onChange={handleSearch} />
                 <span><i class="ri-search-line"></i></span>
               </div>
             </Col>
@@ -94,7 +98,7 @@ const Shop = () => {
       <section className="pt-0">
         <Container>
           <Row>
-            {productsData.length === 0 ? (<h1 className="text-center fs-4">No products are found!</h1>) :
+            {productsData.length === 0 ? (<h1 className="text-center fs-4">Nenhum produto encontrado!</h1>) :
               (<ProductsList data={productsData} />)}
           </Row>
         </Container>
@@ -103,4 +107,4 @@ const Shop = () => {
   )
 }
 
-export default Shop
+export default ProductsPage

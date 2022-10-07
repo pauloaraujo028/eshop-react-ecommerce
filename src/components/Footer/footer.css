@@ -4,9 +4,23 @@
   background: var(--primary-color);
 }
 
+.footer .logo_new {
+  color: coral;
+  font-size: 1.4rem;
+}
+
 .footer span {
   font-size: 1.7rem;
   color: #fff;
+}
+
+.social_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.735);
 }
 
 .footer_text {

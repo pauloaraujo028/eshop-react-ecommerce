@@ -40,15 +40,19 @@ const Home = () => {
     setPopularProducts(filteredPopularProducts);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
-    <Helmet title={"Home"}>
+    <Helmet title={"Inicio"}>
       <section className="hero_section">
         <Container>
           <Row>
             <Col lg="6" md="6">
               <div className="hero_content">
-                <p className="hero_subtitle">Trending product in {year}</p>
-                <h2>Make Your Interior More Minimalistic & Modern </h2>
+                <p className="hero_subtitle">Produtos em alta {year}</p>
+                <h2>Torne seu interior mais minimalista e moderno </h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Ab sapiente illo ipsa expedita eius nam temporibus. Minus
                   neque sapiente atque, veniam, velit doloremque quisquam ullam
@@ -56,7 +60,7 @@ const Home = () => {
                 </p>
 
                 <motion.button whileTap={{ scale: 1.2 }} className="buy_btn">
-                  <Link to="/shop">SHOP NOW</Link>
+                  <Link to="/products">Compre agora</Link>
                 </motion.button>
               </div>
             </Col>
@@ -76,7 +80,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="text-center">
-              <h2 className="section_title">Trending Products</h2>
+              <h2 className="section_title">Produtos em alta</h2>
             </Col>
             <ProductsList data={trendingProducts} />
           </Row>
@@ -87,7 +91,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="text-center">
-              <h2 className="section_title">Best Sales</h2>
+              <h2 className="section_title">Mais Vendidos</h2>
             </Col>
             <ProductsList data={bestSalesProducts} />
           </Row>
@@ -100,12 +104,12 @@ const Home = () => {
 
             <Col lg="6" md="12" className="count_down-col">
               <div className="clock_top-content">
-                <h4 className="text-white fs-6 mb-2">Limited Offers</h4>
-                <h3 className="text-white fs-5 mb-3">Quality Armchair</h3>
+                <h4 className="text-white fs-6 mb-2">Ofertas limitadas</h4>
+                <h3 className="text-white fs-5 mb-3">Poltrona de qualidade</h3>
               </div>
               <Clock />
               <motion.button whileTap={{ scale: 1.2 }} className="buy_btn store_btn">
-                <Link to="/shop">Visit Store</Link>
+                <Link to="/shop">Compre Agora</Link>
               </motion.button>
             </Col>
 
@@ -120,7 +124,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="text-center mb-5">
-              <h2 className="section_title">New Arrivals</h2>
+              <h2 className="section_title">Novos Produtos</h2>
             </Col>
             <ProductsList data={mobileProducts} />
             <ProductsList data={wirelessProducts} />
@@ -132,7 +136,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="text-center mb-5">
-              <h2 className="section_title">Popular in Category</h2>
+              <h2 className="section_title">Popular na Categoria</h2>
             </Col>
             <ProductsList data={popularProducts} />
           </Row>

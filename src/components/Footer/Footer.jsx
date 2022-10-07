@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="logo">
               <span><i class="ri-shopping-bag-line"></i></span>
               <div>
-                <h1 className="text-white">eShop</h1>
+                <h1 className="text-white"><span className="logo_new">e</span>Shop</h1>
               </div>
             </div>
             <p className="footer_text mt-3">
@@ -23,11 +23,25 @@ const Footer = () => {
               aliquam at autem nesciunt natus illo ipsum dignissimos provident
               voluptate qui?
             </p>
+            <div className="social_icons">
+              <a href="https://www.instagram.com/" target='_blank' rel='noreferrer'>
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="https://www.linkedin.com/" target='_blank' rel='noreferrer'>
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a href="https://www.facebook.com/" target='_blank' rel='noreferrer'>
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a href="https://web.whatsapp.com/" target='_blank' rel='noreferrer'>
+                <i class="ri-whatsapp-line"></i>
+              </a>
+            </div>
           </Col>
 
           <Col lg="3" md="3" className="mb-4">
             <div className="footer_quick-links">
-              <h4 className="quick_links-title">Top Categories</h4>
+              <h4 className="quick_links-title">Principais Categorias</h4>
               <ListGroup className="mb-3">
                 <ListGroupItem className="ps-0 border-0">
                   <Link to="#">Mobile Phones</Link>
@@ -50,22 +64,26 @@ const Footer = () => {
 
           <Col lg="2" md="3" className="mb-4">
             <div className="footer_quick-links">
-              <h4 className="quick_links-title">Useful Links</h4>
+              <h4 className="quick_links-title">Links Úteis</h4>
               <ListGroup className="mb-3">
                 <ListGroupItem className="ps-0 border-0">
-                  <Link to="/shop">Shop</Link>
+                  <Link to="/about">Sobre</Link>
                 </ListGroupItem>
 
                 <ListGroupItem className="ps-0 border-0">
-                  <Link to="cart">Cart</Link>
+                  <Link to="/products">Produtos</Link>
                 </ListGroupItem>
 
                 <ListGroupItem className="ps-0 border-0">
-                  <Link to="login">Login</Link>
+                  <Link to="/shops">Lojas</Link>
                 </ListGroupItem>
 
                 <ListGroupItem className="ps-0 border-0">
-                  <Link to="#">Provacy Policy</Link>
+                  <Link to="/cart">Carrinho</Link>
+                </ListGroupItem>
+
+                <ListGroupItem className="ps-0 border-0">
+                  <Link to="/login">Login</Link>
                 </ListGroupItem>
               </ListGroup>
             </div>
@@ -73,7 +91,7 @@ const Footer = () => {
 
           <Col lg="3" md="4">
             <div className="footer_quick-links">
-              <h4 className="quick_links-title">Contact</h4>
+              <h4 className="quick_links-title">Contato</h4>
               <ListGroup className="footer_contact">
                 <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-2">
                   <span><i class="ri-map-pin-line"></i></span>
@@ -103,7 +121,7 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-    </footer>
+    </footer >
   )
 }
 

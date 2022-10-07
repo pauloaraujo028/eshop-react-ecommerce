@@ -39,7 +39,7 @@ const ProductDetails = () => {
     }
 
     console.log(reviewObj);
-    toast.success("Review submitted")
+    toast.success("Revisão enviada")
   }
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const ProductDetails = () => {
       price,
     }))
 
-    toast.success("Product added successfully")
+    toast.success("Produto adicionado com sucesso")
   }
 
   return (
@@ -93,15 +93,15 @@ const ProductDetails = () => {
                 </div>
 
                 <div className="d-flex align-items-center gap-5">
-                  <span className="product_price">${price}</span>
-                  <span>Category: {category.toUpperCase()}</span>
+                  <span className="product_price">R$ {price}</span>
+                  <span>Categoria: {category.toUpperCase()}</span>
                 </div>
                 <p className="mt-3">{shortDesc}</p>
 
                 <motion.button
                   whileTap={{ scale: 1.2 }}
                   className="buy_btn"
-                  onClick={addToCart}>Add to Cart</motion.button>
+                  onClick={addToCart}>Adicionar ao Carrinho</motion.button>
               </div>
             </Col>
           </Row>
@@ -114,9 +114,9 @@ const ProductDetails = () => {
             <Col lg="12">
               <div className="tab_wrapper d-flex align-items-center gap-5">
                 <h6 className={`${tab === "desc" ? "active_tab" : ""}`}
-                  onClick={() => setTab('desc')}>Description</h6>
+                  onClick={() => setTab('desc')}>Descrição</h6>
                 <h6 className={`${tab === "rev" ? "active_tab" : ""}`}
-                  onClick={() => setTab('rev')}>Reviews ({reviews.length})</h6>
+                  onClick={() => setTab('rev')}>Avaliações ({reviews.length})</h6>
               </div>
 
               {tab === "desc" ? (<div className="tab_content mt-5">
@@ -134,7 +134,7 @@ const ProductDetails = () => {
                   </ul>
 
                   <div className="review_form">
-                    <h4>Leave your experience</h4>
+                    <h4>Deixe sua experiência</h4>
                     <form action="" onSubmit={submitHandler}>
                       <div className="form_group">
                         <input type="text" placeholder="Enter name" ref={reviewUser} required />
@@ -168,7 +168,7 @@ const ProductDetails = () => {
             </Col>
 
             <Col lg="12" className="mt-5">
-              <h2 className="related_title">You might also like</h2>
+              <h2 className="related_title">Você pode gostar também</h2>
             </Col>
 
             <ProductsList data={relatedProducts} />

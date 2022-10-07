@@ -22,9 +22,13 @@
 }
 
 .logo h1 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--primary-color);
+}
+
+.logo_new {
+  color: coral;
 }
 
 .menu {
@@ -75,10 +79,45 @@
   z-index: 10;
 }
 
-.nav_icons span img {
+.nav_icons .profile img {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  border-radius: 50%;
+}
+
+.nav_icons .profile {
+  position: relative;
+  z-index: 9;
+}
+
+.nav_icons .profile .profile_actions {
+  position: absolute;
+  top: 98%;
+  left: -25px;
+  width: 80px;
+  z-index: 10;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--primary-color);
+  color: #fff;
+  line-height: 30px;
+  display: none;
+  cursor: pointer;
+  border-radius: 0 0 10px 10px;
+}
+
+.show_profileActions {
+  display: block !important;
+}
+
+.signin_signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .mobile_menu {

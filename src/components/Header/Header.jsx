@@ -1,38 +1,51 @@
 import React, { useRef, useEffect } from "react";
 
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./header.css";
 
 import { motion } from "framer-motion";
 
 import logo from "../../assets/images/eco-logo.png";
-import userIcon from "../../assets/images/user-icon.png"
+import userIcon from "../../assets/images/user-icon.png";
 
 import { Container, Row } from "reactstrap";
 import { useSelector } from "react-redux";
+import useAuth from "../../custom-hooks/useAuth";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase.config";
+import { toast } from "react-toastify";
 
 const nav_links = [
   {
     path: "home",
-    display: "Home"
+    display: "Inicio"
   },
   {
-    path: "shop",
-    display: "Shop"
+    path: "about",
+    display: "Sobre"
+  },
+  {
+    path: "products",
+    display: "Produtos"
+  },
+  {
+    path: "shops",
+    display: "Lojas"
   },
   {
     path: "cart",
-    display: "Cart"
+    display: "Carrinho"
   },
 ]
 
 const Header = () => {
-
   const headerRef = useRef(null);
   const totalQuantity = useSelector(state => state.cart.totalQuantity)
+  const profileActionRef = useRef(null)
 
   const menuRef = useRef(null);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { currentUser } = useAuth();
 
   const stickyHeaderFunc = () => {
     window.addEventListener('scroll', () => {
@@ -41,6 +54,15 @@ const Header = () => {
       } else {
         headerRef.current.classList.remove("sticky_header")
       }
+    })
+  }
+
+  const logout = () => {
+    signOut(auth).then(() => {
+      toast.success("Desconectado")
+      navigate("/home")
+    }).catch(err => {
+      toast.error(err.message)
     })
   }
 
@@ -56,6 +78,8 @@ const Header = () => {
     navigate("/cart")
   }
 
+  const toggleProfileActions = () => profileActionRef.current.classList.toggle("show_profileActions")
+
   return (
     <header className="header" ref={headerRef}>
       <Container>
@@ -64,7 +88,7 @@ const Header = () => {
             <div className="logo">
               <img src={logo} alt="logo" />
               <div>
-                <h1>eShop</h1>
+                <h1><span className="logo_new">e</span>Shop</h1>
               </div>
             </div>
 
@@ -91,9 +115,24 @@ const Header = () => {
                 <span className="badge">{totalQuantity}</span>
               </span>
 
-              <span>
-                <motion.img whileTap={{ scale: 1.2 }} src={userIcon} alt="user" />
-              </span>
+              <div className="profile">
+                <motion.img
+                  whileTap={{ scale: 1.2 }}
+                  src={currentUser ? currentUser.photoURL : userIcon}
+                  alt="user"
+                  onClick={toggleProfileActions}
+                />
+
+                <div className="profile_actions" ref={profileActionRef} onClick={toggleProfileActions}>
+                  {currentUser ? (<span className="d-flex align-items-center justify-content-center"
+                    onClick={logout}>Sair</span>) :
+                    (<div className="signin_signup">
+                      <Link to="/login">Entrar</Link>
+                      <Link to="/signup">Registrar</Link>
+                    </div>)
+                  }
+                </div>
+              </div>
               <div className="mobile_menu">
                 <span onClick={menuToggle}>
                   <i class="ri-menu-line"></i>
