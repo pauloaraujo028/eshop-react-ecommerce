@@ -109,7 +109,7 @@ const Home = () => {
               </div>
               <Clock />
               <motion.button whileTap={{ scale: 1.2 }} className="buy_btn store_btn">
-                <Link to="/shop">Compre Agora</Link>
+                <Link to="/products">Compre Agora</Link>
               </motion.button>
             </Col>
 

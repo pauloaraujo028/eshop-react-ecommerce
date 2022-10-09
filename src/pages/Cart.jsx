@@ -51,17 +51,17 @@ const Cart = () => {
             <Col lg="3">
               <div>
                 <h6 className="d-flex align-items-center justify-content-between">Subtotal
-                  <span className="fs-4 fw-bold">R$ {totalAmount}</span>
+                  <span className="fs-4 fw-bold">R$ {totalAmount},00</span>
                 </h6>
               </div>
               <p className="fs-6 mt-2">Impostos e frete serão calculados na finalização da compra.</p>
               <div>
                 <button className="buy_btn w-100">
-                  <Link to="/checkout">Checkout</Link>
+                  <Link to="/checkout">Finalizar Compra</Link>
                 </button>
 
                 <button className="buy_btn w-100 mt-3">
-                  <Link to="/shop">Continue Comprando</Link>
+                  <Link to="/products">Continue Comprando</Link>
                 </button>
               </div>
             </Col>

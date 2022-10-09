@@ -3,12 +3,12 @@ import React, { useEffect } from "react";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import { Container, Row, Col } from "reactstrap";
-//import { Link } from "react-router-dom";
-//import { motion } from "framer-motion";
-//import heroImg from "../assets/images/hero-img.png";
+import shopOne from "../assets/images/shop-1.png";
+import shopTwo from "../assets/images/shop-2.png";
+
+import "../styles/shops.css";
 
 const Shops = () => {
-  //const year = new Date().getFullYear()
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -19,32 +19,39 @@ const Shops = () => {
       <CommonSection title="Conheça nossas Lojas" />
       <section className="hero_section">
         <Container>
-          <Row>
-            <Col lg="6" md="6">
-              {/*<div className="hero_content">
-                <p className="hero_subtitle">Produtos em alta {year}</p>
-                <h2>Torne seu interior mais minimalista e moderno </h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Ab sapiente illo ipsa expedita eius nam temporibus. Minus
-                  neque sapiente atque, veniam, velit doloremque quisquam ullam
-                  ex beatae provident totam deserunt?
-                </p>
-
-                <motion.button whileTap={{ scale: 1.2 }} className="buy_btn">
-                  <Link to="/shop">Compre agora</Link>
-                </motion.button>
-              </div>*/}
+          <Row className="text-center">
+            <Col lg="6" md="12">
+              <div className="hero_content">
+                <h2><span>Loja 01 - </span>ZasrBazar</h2>
+                <p><i class="ri-map-pin-line"></i> Endereço: ZasrBazar, Sylhet, Bangladesh</p>
+                <p><i class="ri-phone-line"></i> Telefone: 9999999999</p>
+              </div>
             </Col>
 
-            <Col lg="6" md="6">
-              {/*<div className="hero_img">
-                <img src={heroImg} alt="" />
-              </div>*/}
+            <Col lg="6" md="12">
+              <div className="hero_img">
+                <img src={shopOne} alt="" />
+              </div>
+            </Col>
+          </Row>
+          <Row className="text-center">
+            <Col lg="6" md="12">
+              <div className="hero_content">
+                <h2><span>Loja 02 - </span>ZasrBazar</h2>
+                <p><i class="ri-map-pin-line"></i> Endereço: ZasrBazar, Sylhet, Bangladesh</p>
+                <p><i class="ri-phone-line"></i> Telefone: 9999999999</p>
+              </div>
+            </Col>
+
+            <Col lg="6" md="12">
+              <div className="hero_img">
+                <img src={shopTwo} alt="" />
+              </div>
             </Col>
           </Row>
         </Container>
       </section>
-    </Helmet>
+    </Helmet >
   )
 }
 
