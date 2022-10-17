@@ -105,7 +105,7 @@ const Home = () => {
             <Col lg="6" md="12" className="count_down-col">
               <div className="clock_top-content">
                 <h4 className="text-white fs-6 mb-2">Ofertas limitadas</h4>
-                <h3 className="text-white fs-5 mb-3">Poltrona de qualidade</h3>
+                <h3 className="text-white fs-5 mb-3">Produtos de Qualidade</h3>
               </div>
               <Clock />
               <motion.button whileTap={{ scale: 1.2 }} className="buy_btn store_btn">
@@ -123,7 +123,7 @@ const Home = () => {
       <section className="new_arrivals">
         <Container>
           <Row>
-            <Col lg="12" className="text-center mb-5">
+            <Col lg="12" className="text-center">
               <h2 className="section_title">Novos Produtos</h2>
             </Col>
             <ProductsList data={mobileProducts} />
