@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://eshop-react-ecommerce.netlify.app/home" alt="logo">
+  <a href="https://eshop-react-ecommerce.netlify.app/home" alt="logo" target="_blank">
     <img src="https://user-images.githubusercontent.com/105018299/196264090-86baa4d8-69dd-4fe1-8b37-464bb74da4a6.jpg" alt="eshop" width="500">
   </a>
   
