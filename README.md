@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://eshop-react-ecommerce.netlify.app/home" alt="logo" target="_blank">
+  <a href="https://eshop-react-ecommerce.netlify.app/" alt="logo" target="_blank">
     <img src="https://user-images.githubusercontent.com/105018299/196264090-86baa4d8-69dd-4fe1-8b37-464bb74da4a6.jpg" alt="eshop" width="500">
   </a>
   
@@ -60,7 +60,7 @@ Projeto prático de comércio eletrônico full stack, sendo construído com Reac
 * Autenticação com Firebase v9 (firebase firestore, firebase storage).
 * useState, useEffect, useRef hooks.
 
-Ecommerce website projeto para demonstrar conhecimentos aprendidos sobre React Redux, autenticação do Firebase, firebase firestore, firebase storage, useState, useEffect, useRef entre outras funcionalidades, possui design responsivo, UI e UX, utilizável em todos os dispositivos. Todas funcionalidades estão funcionando perfeitamente, Espero que goste. Clique [aqui](https://eshop-react-ecommerce.netlify.app/home) para ver o projeto ao vivo na web.
+Ecommerce website projeto para demonstrar conhecimentos aprendidos sobre React Redux, autenticação do Firebase, firebase firestore, firebase storage, useState, useEffect, useRef entre outras funcionalidades, possui design responsivo, UI e UX, utilizável em todos os dispositivos. Todas funcionalidades estão funcionando perfeitamente, Espero que goste. Clique [aqui](https://eshop-react-ecommerce.netlify.app/) para ver o projeto ao vivo na web.
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
@@ -130,7 +130,7 @@ Distribuído sob a licença MIT.
 ## Contato
 ### Paulo Araújo
 
-<a href="https://pauloaraujo-portfolio.netlify.app/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139" target="_blank"></a>
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139)](https://pauloaraujo-portfolio.netlify.app/)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pauloaraujo028/)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pauloaraujo028) 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pauloaraujo.phz@gmail.com)
